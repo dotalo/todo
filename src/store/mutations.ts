@@ -3,7 +3,7 @@ import { Mutation, MutationTree } from "vuex";
 import { AppState } from "./state";
 
 const addTodo: Mutation<AppState> = (state, todo: Todo) =>
-  (state.todos = [...state.todos, todo]);
+  (state.todos = [todo, ...state.todos]);
 
 const removeTodo: Mutation<AppState> = (state, id: string) => {
   const indexInTodos: number = state.todos.findIndex((todo) => todo.id === id);
@@ -15,8 +15,8 @@ const removeTodo: Mutation<AppState> = (state, id: string) => {
 const toggleTodo: Mutation<AppState> = (state, id: string) => {
   const indexInTodos: number = state.todos.findIndex((todo) => todo.id === id);
   const todos: Todo[] = state.todos;
-  const todo = todos[indexInTodos];
-  todos[indexInTodos] = { ...todo, active: !todo.active };
+  const todo: Todo = state.todos[indexInTodos];
+  todos.splice(indexInTodos, 1, { ...todo, active: !todo.active });
   state.todos = todos;
 };
 

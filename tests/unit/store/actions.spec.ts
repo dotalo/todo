@@ -13,8 +13,8 @@ describe("store: actions", () => {
     const addTodo = actions[ActionTypes.addTodo];
     //@ts-ignore
     addTodo({ commit }, content);
-    expect(typeof state.todos[0].id).toBe('string');
-    expect(typeof state.todos[0].createdAt).toBe('number');
+    expect(typeof state.todos[0].id).toBe("string");
+    expect(typeof state.todos[0].createdAt).toBe("number");
     expect(state.todos[0].active).toBeTruthy();
     expect(state.todos[0].content).toBe(content);
   });
