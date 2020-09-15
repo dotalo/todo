@@ -15,13 +15,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Separator from "./components/Separator.vue";
-import { Todo } from "./shared/models/todo";
-import store from "./store";
-import TodoItem from "./components/TodoItem.vue";
-import AppHeader from "./components/AppHeader.vue";
-import NewTodo from "./components/NewTodo.vue";
+import { Component, Vue } from 'vue-property-decorator';
+import Separator from './components/Separator.vue';
+import { Todo } from './shared/models/todo';
+import store from './store';
+import TodoItem from './components/TodoItem.vue';
+import AppHeader from './components/AppHeader.vue';
+import NewTodo from './components/NewTodo.vue';
 
 @Component({ store, components: { Separator, TodoItem, AppHeader, NewTodo } })
 export default class App extends Vue {

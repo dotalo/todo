@@ -36,10 +36,10 @@
 </template>
 
 <script lang="ts">
-import { Todo } from "@/shared/models/todo";
-import store from "@/store";
-import { MutationTypes } from "@/store/mutations";
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Todo } from '@/shared/models/todo';
+import store from '@/store';
+import { MutationTypes } from '@/store/mutations';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({ store })
 export default class TodoItem extends Vue {

@@ -17,13 +17,13 @@
 </template>
 
 <script lang="ts">
-import store from "@/store";
-import { ActionTypes } from "@/store/actions";
-import { Component, Vue } from "vue-property-decorator";
+import store from '@/store';
+import { ActionTypes } from '@/store/actions';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({ store })
 export default class NewTodo extends Vue {
-  private content = "";
+  private content = '';
 
   private get contentInput(): string {
     return this.content;
@@ -35,7 +35,7 @@ export default class NewTodo extends Vue {
 
   private addTodo(): void {
     this.$store.dispatch(ActionTypes.addTodo, this.content);
-    this.content = "";
+    this.content = '';
   }
 }
 </script>
